@@ -12,12 +12,18 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function getSeason(date) {
+
     if (!date) {
         return 'Unable to determine the time of year!';
     }
-    if (Object.prototype.toString.call(date) !== '[object Date]') {
+
+    if (
+        !(date instanceof Date) ||
+        Object.getOwnPropertyNames(date).length > 0
+    ) {
         throw new Error('Invalid date!');
     }
+
     const seasons = [
         'winter',
         'winter',
@@ -34,7 +40,9 @@ function getSeason(date) {
     ];
 
     const month = date.getMonth();
+
     return seasons[month];
+
 }
 
 module.exports = {
