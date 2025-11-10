@@ -1,8 +1,9 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Implement class DepthCalculator with method calculateDepth
- * that calculates deoth of nested array
+ * that calculates depth of nested array
+>>>>>>> upstream/master
  *
  * @example
  *
@@ -30,5 +31,5 @@ class DepthCalculator {
 }
 
 module.exports = {
-  DepthCalculator
+  depthCalculator: new DepthCalculator(),
 };

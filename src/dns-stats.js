@@ -1,4 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Given an array of domains, return the object with the appearances of the DNS.
@@ -24,6 +24,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function getDNSStats(domains) {
     const object = {};
+    
     for (const string of domains) {
         const reversedArrayOfDomains = string.split('.').reverse();
 
@@ -34,6 +35,7 @@ function getDNSStats(domains) {
             object[stringOfDomains] = (object[stringOfDomains] || 0) + 1;
         }
     }
+
     return object;
 }
 

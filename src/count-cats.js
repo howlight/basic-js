@@ -1,4 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Given matrix where you have to find cats by ears "^^"
@@ -18,12 +18,10 @@ function countCats(matrix) {
     const cat = '^^';
     let sumOfCats = 0;
 
-    // перебор матрицы во вложенном цикле
     for (let i = 0; i < matrix.length; i++) {
         let arr = matrix[i];
+        
         for (let j = 0; j < arr.length; j++) {
-            // если элемент matrix[i][j] равен cat,
-            // увеличиваем счетчик на 1
             if (arr[j] === cat) {
                 sumOfCats += 1;
             }

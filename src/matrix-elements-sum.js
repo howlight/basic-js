@@ -1,4 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Given matrix, a rectangular matrix of integers,
@@ -26,6 +26,7 @@ function getMatrixElementsSum(matrix) {
       accumulator += value;
     }
   }
+  
   return accumulator;
 }
 

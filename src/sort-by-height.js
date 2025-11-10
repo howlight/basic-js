@@ -1,4 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError } = require('../lib');
 
 /**
  * Given an array with heights, sort them except if the value is -1.
@@ -21,7 +21,7 @@ function sortByHeight(arr) {
   for (const index of indices) {
     sortedArr.splice(index, 0, -1);
   }
-  
+
   return sortedArr;
 }
 
